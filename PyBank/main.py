@@ -43,12 +43,12 @@ csv_path = os.path.join("Output.txt")
 
 with open(csv_path, "w") as writer:
     
-    #writer.write("Financial Analizis")
-    #writer.write("--------------------")
-    #writer.write(f'Total Months: {total_months}')
-    #writer.write(f'Total: {total}')
-    #writer.write(f'Average Change: {average_change}')
-    #writer.write(f'Greatest Decrease in Profits: {greatest_decrease["Date"]} ({greatest_decrease["Amount"]})')
-    #writer.write(f'Greatest Increase in Profits: {greatest_increase["Date"]} ({greatest_increase["Amount"]})')
+    writer.write("Financial Analizis\n")
+    writer.write("--------------------\n")
+    writer.write(f'Total Months: {total_months}\n')
+    writer.write(f'Total: {total}\n')
+    writer.write(f'Average Change: {average_change}\n')
+    writer.write(f'Greatest Decrease in Profits: {greatest_decrease["Date"]} ({greatest_decrease["Amount"]})\n')
+    writer.write(f'Greatest Increase in Profits: {greatest_increase["Date"]} ({greatest_increase["Amount"]})\n')
 
 
