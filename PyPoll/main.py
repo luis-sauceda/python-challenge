@@ -1,7 +1,7 @@
 import os
 import csv
 
-file_path = os.path.join("C:\\Users\\lsauc\\Documents\\BootCamp\\python-challenge\\PyPoll","election_test.csv")
+file_path = os.path.join("Resources_election_data.csv")
 total_votes = 0
 candidates = []
 votes = {}
