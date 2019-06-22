@@ -28,20 +28,32 @@ def percentage(votes_count, total):
 winner = ""
 winner_votes = 0
 
-print("Election Results")
-print("--------------------")
-print(str(total_votes))
-print("--------------------")
+csv_path = os.path.join("Output.txt")
 
-for candidate, val in votes.items():
-    print (candidate + ": " + str(percentage(val, total_votes)) + "%" + f' ({val})')
+with open(csv_path, "w") as writer:
     
-    if val > winner_votes:
-        winner_votes = val
-        winner = candidate
-    
-print("--------------------")
-print("Winner: " + winner)
-print("--------------------")
+    writer.write("Election Results\n")
+    print("Election Results")
+    writer.write("--------------------\n")
+    print("--------------------")
+    writer.write(str(total_votes) +"\n")
+    print(str(total_votes))
+    writer.write("--------------------\n")
+    print("--------------------")
+
+    for candidate, val in votes.items():
+        print (candidate + ": " + str(percentage(val, total_votes)) + "%" + f' ({val})')
+        writer.write(candidate + ": " + str(percentage(val, total_votes)) + "%" + f' ({val})\n')
+        if val > winner_votes:
+            winner_votes = val
+            winner = candidate
+    writer.write("--------------------\n")
+    print("--------------------")
+    writer.write("Winner: " + winner + "\n")
+    print("Winner: " + winner)
+    writer.write("--------------------")
+    print("--------------------")
+
+
 
     
